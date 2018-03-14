@@ -6,6 +6,7 @@ Node.js 8.10
 Python 3.6.4
 React 16.2.0
 
+```
 .
 ├── README.md
 └── imbellus/
@@ -16,20 +17,26 @@ React 16.2.0
         ├── images/
         └── js/
 
+```
+
 Setting up the server
 =====================
 
 Install virtual env
+-------------------
+Create a virtual env and install flask and requests.
 
 virtualenv venv
 source venv/bin/activate
 
 Install flask and dependencies
+------------------------------
 
 pip3 install Flask
 pip3 install requests
 
-Launch the server:
+Launch the server
+-----------------
 
 I have added a bootstrap.sh file that can be used to start the server, just run:
 
@@ -57,6 +64,7 @@ Sample API Calls
 ================
 
 Get geometrical distance
+------------------------
 
 Given the two points (x1, y1) and (x2, y2), the distance d between these points is given by the following:
 
@@ -77,12 +85,14 @@ http://localhost:5000/geocode/distance/?origin_lat=40.78&origin_lon=-73.9&destin
 
 
 Get lat and long
+----------------
 Just a wrapper for the google API
 
 http://localhost:5000/geocode/latlng/200%20n%20san%20fernando%20rd%2090031
 
 
 Get address
+-----------
 Just a wrapper for the google API
 
 http://localhost:5000/geocode/address/40.71,-73.96
